@@ -1,4 +1,4 @@
-FROM node
+FROM nginx
 LABEL name="diet-client"
 LABEL version="1.0"
 COPY ./dist /usr/share/nginx/html
