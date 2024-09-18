@@ -19,7 +19,7 @@
         </div>
       </van-form>
     </div>
-    <p class="register" @click="() => router.push('/register')">新用户?点击注册</p>
+    <p class="register" @click="() => router.push('/register')">新用户?点击这里注册</p>
   </div>
 </template>
 
