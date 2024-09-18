@@ -6,7 +6,7 @@
     </div>
     <div class="search">
       <van-search shape="round" @search="onClickButton" @focus="focus" v-model="search_text" show-action
-        placeholder="今天想吃点什么?">
+        placeholder="今天想吃点什么呢?">
         <template #action>
           <span class="search_span" @click="onClickButton">搜索</span>
         </template>
