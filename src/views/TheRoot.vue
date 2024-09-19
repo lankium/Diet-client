@@ -11,4 +11,8 @@
 import Bottom from '@/views/layout/Bottom.vue'
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.bottom {
+  height: 50px;
+}
+</style>
