@@ -39,9 +39,11 @@ const onSubmit = async (values: { username: any; password: any; }) => {
     username: values.username,
     password: values.password
   })
-  if (res.code == '8000') {
-    sessionStorage.setItem('userInfo', JSON.stringify(res.data))
-    sessionStorage.setItem('token', res.token as string)
+  console.log(res);
+
+  if (res.data.code == '8000') {
+    sessionStorage.setItem('userInfo', JSON.stringify(res.data.data))
+    sessionStorage.setItem('token', res.data.token as string)
     router.push('/home')
   } else {
     showFailToast(res.msg)

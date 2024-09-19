@@ -16,12 +16,12 @@ axios.interceptors.response.use(res => {
 
 export default axios
 // 请求拦截
-// axios.interceptors.request.use(req => {
-//   let jwtToken = sessionStorage.getItem('token')
-//   if (jwtToken) {
-//     req.headers.Authorization = jwtToken
-//   }
-//   return req
-// })
+axios.interceptors.request.use(req => {
+  let jwtToken = sessionStorage.getItem('token')
+  if (jwtToken) {
+    req.headers.Authorization = jwtToken
+  }
+  return req
+})
 
 

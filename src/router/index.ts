@@ -65,11 +65,25 @@ const router = createRouter({
   routes,
 })
 
-router.beforeEach((to, _from, next) => {
+// 全局前置守卫
+const whitePath = ['/login', '/register']
+router.beforeEach((to, from, next) => {
   if (to.meta.title) {
     document.title = to.meta.title as string
   }
+  if (!whitePath.includes(to.path)) {
+    // 判断本地有无用户数据
+    if (!sessionStorage.getItem('userInfo')) {
+      router.push('/login')
+      return
+      // return { name: 'login' }
+    }
+    next()
+    return
+  }
   next()
+  return
 })
+
 
 export default router
