@@ -67,7 +67,7 @@ const router = createRouter({
 
 // 全局前置守卫
 const whitePath = ['/login', '/register']
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _from, next) => {
   if (to.meta.title) {
     document.title = to.meta.title as string
   }
