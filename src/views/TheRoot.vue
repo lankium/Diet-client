@@ -13,6 +13,8 @@ import Bottom from '@/views/layout/Bottom.vue'
 
 <style lang="less" scoped>
 .bottom {
+  position: fixed;
+  bottom: 0;
   height: 50px;
 }
 </style>

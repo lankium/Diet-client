@@ -49,7 +49,7 @@ const { hasMore, setHasMore } = useIntersectionObserver(nodeRef, () => {
 
 <style lang="less" scoped>
 .contents {
-  padding: 6% 0 1.8rem 0;
+  padding: 6% 0 50px 0;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
@@ -57,7 +57,10 @@ const { hasMore, setHasMore } = useIntersectionObserver(nodeRef, () => {
   .content {
     width: 44%;
     padding: 3%;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 
     .food_img {
       width: 4.4rem;
@@ -67,6 +70,7 @@ const { hasMore, setHasMore } = useIntersectionObserver(nodeRef, () => {
     }
 
     .food_title {
+      display: inline-block;
       font-size: 0.5rem;
       font-weight: bold;
       line-height: 0.8rem;

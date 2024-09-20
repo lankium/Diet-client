@@ -39,6 +39,10 @@ const active = ref<number>(0);
 </script>
 
 <style lang="less" scoped>
+.van-tabbar {
+  background-color: white;
+}
+
 .iconfont {
   font-size: 0.9rem;
 }
